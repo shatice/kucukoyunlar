@@ -1,3 +1,7 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
 section {
     width: 100vw;
     height: 100vh;
@@ -12,7 +16,6 @@ section {
     left: 20px; 
     background: white; 
     color: $favColor; 
-    font-family: Arial, Helvetica, sans-serif; 
     padding: 20px; 
     line-height: 1.5; 
     box-shadow: 0px 2px 2px 2px rgba(189, 189, 189, 0.301); 
@@ -22,6 +25,16 @@ section {
         font-weight: bold; 
         font-size: 1.2rem; 
     }
+}
+
+.gameScores {
+    color: white; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    position: absolute; 
+    top: 40px; 
+    right: 40px; 
+    text-align: right; 
 }
 
 ul {
