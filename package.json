@@ -1,0 +1,24 @@
+{
+  "name": "kucukoyunlar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shatice/kucukoyunlar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shatice/kucukoyunlar/issues"
+  },
+  "homepage": "https://github.com/shatice/kucukoyunlar#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.3"
+  }
+}

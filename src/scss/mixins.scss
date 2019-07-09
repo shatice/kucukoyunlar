@@ -1,0 +1,9 @@
+$favColor: #D3BE2C;
+$wonColor: #D68221; 
+
+@mixin flexcolumn($direction, $justify, $align) {
+    display: flex; 
+    flex-direction: $direction; 
+    justify-content: $justify; 
+    align-items: $align; 
+}

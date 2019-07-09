@@ -1,0 +1,86 @@
+section {
+    width: 100vw;
+    height: 100vh;
+    @include flexcolumn(row, space-around, center);  
+    background: $favColor;
+    position: relative; 
+}
+
+.gameRules {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    background: white; 
+    color: $favColor; 
+    font-family: Arial, Helvetica, sans-serif; 
+    padding: 20px; 
+    line-height: 1.5; 
+    box-shadow: 0px 2px 2px 2px rgba(189, 189, 189, 0.301); 
+
+    h1 {
+        text-transform: uppercase; 
+        font-weight: bold; 
+        font-size: 1.2rem; 
+    }
+}
+
+ul {
+    height: 200px; 
+    width: 200px; 
+    border-bottom: 10px solid white; 
+    position: relative; 
+    @include flexcolumn(column, flex-end, center);
+    cursor: pointer;
+    transition: all 1s; 
+}
+
+ul::after {
+    content: ""; 
+    background: white; 
+    height: 100%;
+    width: 10px; 
+    position: absolute; 
+    left: 95px;
+    transition: all 1s; 
+}
+
+li {
+    background: white; 
+    border: solid $favColor; 
+    height: 30px;
+    width: 180px; 
+    transition: all 1s; 
+}
+
+.step5 {
+    width: 160px; 
+}
+
+.step4 {
+    width: 140px; 
+}
+
+.step3 {
+    width: 120px; 
+}
+
+.step2 {
+    width: 100px; 
+}
+
+.step1 {
+    width: 80px; 
+}
+
+.is-won {
+    border-bottom: 10px solid $wonColor; 
+
+    li {
+        background: $wonColor;
+        z-index: 2;
+    }
+
+    &::after {
+        background: $wonColor; 
+    }
+}
