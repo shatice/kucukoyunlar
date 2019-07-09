@@ -1,0 +1,46 @@
+.home {
+    background: white; 
+    color: $favColor; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    @include flexcolumn(column, space-between, center); 
+    width: 100vw; 
+    height: 100vh;
+
+    h1 {
+        padding: 20px; 
+    }
+}
+
+.games {
+    width: 100%; 
+    height: 80%;
+}
+
+.gamesList {
+    width: 80%; 
+    height: 80%;
+    margin: 0 auto; 
+    @include flexcolumn(row, space-between, center); 
+}
+
+.gamesItem {
+    cursor: pointer; 
+    color: white; 
+    background: $favColor; 
+    padding: 80px 40px; 
+    width: 300px; 
+    height: 500px;
+    @include flexcolumn(column, space-between, center); 
+    box-shadow: 0px 10px 10px rgba(180, 180, 180, 0.377); 
+    transition: transform 0.5s; 
+
+    &:hover {
+        transform: scale(1.05); 
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+}

@@ -1,10 +1,9 @@
-body {
-    font-family: Arial, Helvetica, sans-serif; 
-}
-
 section {
     width: 100vw;
     height: 100vh;
+}
+
+.hanoi {
     @include flexcolumn(row, space-around, center);  
     background: $favColor;
     position: relative; 
@@ -14,11 +13,10 @@ section {
     position: absolute; 
     top: 20px; 
     left: 20px; 
-    background: white; 
-    color: $favColor; 
+    border-left: 5px solid white; 
+    color: white; 
     padding: 20px; 
     line-height: 1.5; 
-    box-shadow: 0px 2px 2px 2px rgba(189, 189, 189, 0.301); 
 
     h1 {
         text-transform: uppercase; 
@@ -37,7 +35,7 @@ section {
     text-align: right; 
 }
 
-ul {
+.tower {
     height: 200px; 
     width: 200px; 
     border-bottom: 10px solid white; 
@@ -45,9 +43,37 @@ ul {
     @include flexcolumn(column, flex-end, center);
     cursor: pointer;
     transition: all 1s; 
+
+    li {
+        background: white; 
+        border: solid $favColor; 
+        height: 30px;
+        width: 180px; 
+        transition: all 1s; 
+    }
+
+    .step5 {
+        width: 160px; 
+    }
+    
+    .step4 {
+        width: 140px; 
+    }
+    
+    .step3 {
+        width: 120px; 
+    }
+    
+    .step2 {
+        width: 100px; 
+    }
+    
+    .step1 {
+        width: 80px; 
+    }
 }
 
-ul::after {
+.tower::after {
     content: ""; 
     background: white; 
     height: 100%;
@@ -57,40 +83,12 @@ ul::after {
     transition: all 1s; 
 }
 
-li {
-    background: white; 
-    border: solid $favColor; 
-    height: 30px;
-    width: 180px; 
-    transition: all 1s; 
-}
-
-.step5 {
-    width: 160px; 
-}
-
-.step4 {
-    width: 140px; 
-}
-
-.step3 {
-    width: 120px; 
-}
-
-.step2 {
-    width: 100px; 
-}
-
-.step1 {
-    width: 80px; 
-}
-
 .is-won {
     border-bottom: 10px solid $wonColor; 
+    transform: scale(1.2); 
 
     li {
         background: $wonColor;
-        z-index: 2;
     }
 
     &::after {

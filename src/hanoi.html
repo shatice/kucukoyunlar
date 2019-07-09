@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Küçük Oyunlar</title>
+    <link rel="stylesheet" href="scss/styles.scss">
+    <script defer type="text/javascript" src="js/hanoi.js"></script>
+</head>
+<body>
+    <section class="hanoi">
+        <div class="gameRules">
+            <h1>Towers of Hanoï</h1>
+            <p>Move the first tower's disks to the third one.</p>
+            <p>No larger disk can be placed on top of a smaller one.</p>
+        </div>
+        <div class="gameScores">
+            <p class="score">Score : 0</p>
+            <p class="bestScore">Best score : 0</p>
+        </div>
+        <ul class="tower">
+            <li class="step1" data-weight="1"></li>
+            <li class="step2" data-weight="2"></li>
+            <li class="step3" data-weight="3"></li>
+            <li class="step4" data-weight="4"></li>
+            <li class="step5" data-weight="5"></li>
+            <li class="step6" data-weight="6"></li>
+        </ul>
+        <ul class="tower"></ul>
+        <ul class="tower"></ul>
+    </section>
+</body>
+</html>

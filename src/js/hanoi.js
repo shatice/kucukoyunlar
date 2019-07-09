@@ -1,6 +1,6 @@
 // Inspired by yamsellem's hanoï towers
 
-let uls = document.querySelectorAll('ul'),
+let uls = document.querySelectorAll('.tower'),
     memo, 
     count = 0,   
     bestScore = parseInt(localStorage.getItem('bestscore')) || 0, 
@@ -32,4 +32,4 @@ for (let i = 0; i < uls.length; i++) {
             memo = firstLi; 
         }
     }) 
-}
+};
