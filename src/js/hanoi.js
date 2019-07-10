@@ -19,7 +19,7 @@ for (let i = 0; i < uls.length; i++) {
             ul.prepend(memo);
             memo = undefined;
 
-            if (ul === uls[2] && ul.querySelectorAll('li').length === 1) {
+            if (ul === uls[2] && ul.querySelectorAll('li').length === 6) {
                 ul.classList.add('is-won');
 
                 if (count < bestScore) {
