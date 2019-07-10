@@ -22,7 +22,7 @@ for (let i = 0; i < uls.length; i++) {
             if (ul === uls[2] && ul.querySelectorAll('li').length === 6) {
                 ul.classList.add('is-won');
 
-                if (count < bestScore) {
+                if (count < bestScore || !(localStorage.getItem('bestscore'))) {
                     bestScore = count; 
                     bestScoreItem.innerHTML = 'Best Score : ' + bestScore;
                     localStorage.setItem('bestscore', count);
