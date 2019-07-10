@@ -88,7 +88,7 @@ section {
     transform: scale(1.2); 
 
     li {
-        background: $wonColor;
+        z-index: 2;
     }
 
     &::after {
