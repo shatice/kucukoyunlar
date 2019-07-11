@@ -4,7 +4,8 @@ let uls = document.querySelectorAll('.tower'),
     memo, 
     count = 0,   
     bestScore = parseInt(localStorage.getItem('bestscore')) || 0, 
-    bestScoreItem = document.querySelector('.bestScore');
+    bestScoreItem = document.querySelector('.bestScore'), 
+    endMessage = document.querySelector('.endMessage');
 
 bestScoreItem.innerHTML = 'Best Score : ' + bestScore;
 
@@ -21,6 +22,12 @@ for (let i = 0; i < uls.length; i++) {
 
             if (ul === uls[2] && ul.querySelectorAll('li').length === 6) {
                 ul.classList.add('is-won');
+                endMessage.style.display = 'block';
+                endMessage.querySelector('h3').innerHTML = 'Congrats ! You won in ' + count + ' moves'; 
+                endMessage.querySelector('p').addEventListener('click', function(){
+                    location.reload()
+                    endMessage.style.display = 'none';
+                });
 
                 if (count < bestScore || !(localStorage.getItem('bestscore'))) {
                     bestScore = count; 

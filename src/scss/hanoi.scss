@@ -4,7 +4,7 @@ section {
 }
 
 .hanoi {
-    @include flexcolumn(row, space-around, center);  
+    @include flexcolumn(column, center, center);
     background: $favColor;
     position: relative; 
     color: white; 
@@ -34,7 +34,15 @@ section {
     text-align: right; 
 }
 
+.towers {
+    height: 60%;
+    width: 100%; 
+    @include flexcolumn(row, space-around, center);  
+    flex-wrap: wrap; 
+}
+
 .tower {
+    margin: 10px; 
     height: 200px; 
     width: 200px; 
     border-bottom: 10px solid white; 
@@ -84,7 +92,6 @@ section {
 
 .is-won {
     border-bottom: 10px solid $wonColor; 
-    transform: scale(1.2); 
 
     li {
         z-index: 2;
@@ -92,6 +99,20 @@ section {
 
     &::after {
         background: $wonColor; 
+    }
+}
+
+.endMessage {
+    border: solid red; 
+    padding: 40px; 
+    line-height: 2; 
+    display: none; 
+    text-align: center; 
+    font-size: 1.2rem; 
+
+    p {
+        text-transform: uppercase; 
+        cursor: pointer;
     }
 }
 
