@@ -49,14 +49,12 @@ section {
     position: relative; 
     @include flexcolumn(column, flex-end, center);
     cursor: pointer;
-    transition: all 1s; 
 
     li {
         background: white; 
         border: solid $favColor; 
         height: 30px;
         width: 180px; 
-        transition: all 1s; 
     }
 
     .step5 {
@@ -87,7 +85,6 @@ section {
     width: 10px; 
     position: absolute; 
     left: 95px;
-    transition: all 1s; 
 }
 
 .is-won {
@@ -103,7 +100,6 @@ section {
 }
 
 .endMessage {
-    border: solid red; 
     padding: 40px; 
     line-height: 2; 
     display: none; 
@@ -113,6 +109,17 @@ section {
     p {
         text-transform: uppercase; 
         cursor: pointer;
+        position: relative;
+        border: solid white; 
+        width: 60%; 
+        margin: 0 auto; 
+        transition: all 0.5s; 
+        margin-top: 20px; 
+
+        &:hover {
+            background: white; 
+            color: $favColor; 
+        }
     }
 }
 
